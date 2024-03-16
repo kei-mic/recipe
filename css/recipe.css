@@ -1,0 +1,147 @@
+:root{
+    --soft-blue:#8CB9BD;
+    --light-blue: #C1D8C3;
+    --off-white:#FEFBF6;
+    --yellow-brown: #ECB159;
+    --warm-brown:#B67352;
+}
+
+/* normalizing */
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
+}
+header{
+    text-align: center;
+    margin: 40px;
+    border-bottom: 5px solid var(--warm-brown);
+}
+h1, h2, h3 {
+    font-family: "Nunito", sans-serif;
+}
+
+h2{
+    font-size: 16px;    
+}
+
+/* categories */
+#categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--soft-blue);
+}
+#categories div{
+    background-color: var(--light-blue);
+    padding: 8px 16px;
+    margin: 8px;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.3rem;
+}
+
+/* other ways to search for recipies */
+.input-box{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 24px;
+    max-width: 900px;    
+}
+.grid {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);  
+    margin: 0 auto;
+    max-width: 900px;
+    border-top: 5px solid var(--warm-brown);
+    padding-top: 16px;
+}
+.category-grid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-weight: 800;
+    width: 200px;
+}
+.category-grid img {
+    width: 100%;
+}
+
+input{
+    height: 35px;
+    margin: 8px
+}
+
+button{
+    margin: 16px;
+    margin-right: 40px;
+    padding: 8px 16px;
+    background-color: var(--yellow-brown);
+    border: none;
+    font-size: 16px;
+}
+
+/* recipie box */
+.overlay-bkgd{
+    background-color: #0000006e;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    z-index: 5;
+    width: 100vw; 
+    height: 100vh; 
+    cursor: pointer;
+}
+#recipe-details {
+    display: none; 
+    max-width: 760px;
+    width: 80vw; 
+    height: 80vh; 
+    position: fixed;
+    padding: 20px;
+    margin: auto;
+    padding-bottom: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    background-color:var(--off-white);
+    z-index: 10;
+    cursor: pointer;
+    overflow-y: auto;
+    box-shadow: 10px 10px 20px #0000006e;
+    font-size: 1.3rem;
+}
+.recipe-card{
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto;
+    padding: 40px;   
+}
+#recipe-details h2{
+    text-align: center;
+    font-size: 2rem;
+}
+#recipe-details img{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+.text-box {
+    padding: 0 2rem;
+}
+.source{
+    font-size: 1rem;
+}
